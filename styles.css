@@ -3,19 +3,19 @@
    =============================== */
 
 :root {
-    --bg-base: #060913;
-    /* Deep space dark */
-    --bg-surface: #0f1524;
-    /* Slightly lighter surface */
+    --bg-base: #0f051d;
+    /* Deep Thanos purple dark */
+    --bg-surface: #1c0b35;
+    /* Slightly lighter purple surface */
     --text-main: #f8fafc;
     /* Crisp white */
-    --text-muted: #94a3b8;
-    /* Slate gray */
+    --text-muted: #b1a1c9;
+    /* Muted purple-slate */
 
-    /* Neon Accents */
-    --accent-cyan: #00f0ff;
+    /* Neon Accents (Thanos Power Stone Purple) */
+    --accent-cyan: #c77dff;
     --accent-purple: #9d4edd;
-    --accent-glow-cyan: rgba(0, 240, 255, 0.4);
+    --accent-glow-cyan: rgba(199, 125, 255, 0.4);
     --accent-glow-purple: rgba(157, 78, 221, 0.4);
 
     /* Typography */
@@ -27,8 +27,8 @@
     --nav-height: 80px;
 
     /* Glass Effect */
-    --glass-bg: rgba(15, 21, 36, 0.65);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(28, 11, 53, 0.65);
+    --glass-border: rgba(199, 125, 255, 0.15);
 }
 
 /* ===============================
