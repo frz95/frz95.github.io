@@ -1180,12 +1180,66 @@ footer {
         z-index: 1001;
     }
 
+    /* Hero Mobile Overlap Fix (Stack Layout) */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 120px;
+        padding-bottom: 60px;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        order: 2;
+    }
+
+    .hero-character-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto 3rem auto;
+        /* Vertical spacing between image and text */
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        opacity: 1;
+        /* Reset fainted look */
+        filter: none;
+        /* Reset blur */
+        z-index: 5;
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-character-wrap img {
+        width: 100%;
+        height: auto;
+        pointer-events: auto;
+    }
+
     .hero h1 {
         font-size: 3.5rem;
     }
 
     .hero h2 {
         font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bio {
+        margin: 0 auto 2rem auto;
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
     .section-title {
@@ -1223,6 +1277,7 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
+
 /* ===============================
    INDUSTRY ENGAGEMENT SECTION
    =============================== */
@@ -1252,7 +1307,7 @@ footer {
 
 .industry-media {
     width: 100%;
-    height: 200px; 
+    height: 200px;
     overflow: hidden;
 }
 
