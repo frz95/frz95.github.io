@@ -42,6 +42,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
 }
 
 body {
@@ -1140,23 +1141,45 @@ footer {
    RESPONSIVE DESIGN
    =============================== */
 @media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
     .hero-content {
         width: 100%;
-        padding-right: 0;
-        text-align: center;
+        padding: 0;
         z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-character-wrap {
-        width: 80%;
-        height: 60vh;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0.15;
-        /* Push to subtle background */
-        z-index: 0;
-        filter: blur(5px);
+        position: relative !important;
+        width: min(280px, 80%) !important;
+        height: auto !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 0 auto 1.5rem auto !important;
+        opacity: 1 !important;
+        filter: none !important;
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-character-wrap img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 0 30px var(--accent-glow-cyan);
+        background: var(--bg-surface);
     }
 
     .hero-actions {
@@ -1227,32 +1250,43 @@ footer {
     line-height: 1.4;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .industry-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .industry-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .industry-grid { grid-template-columns: 1fr; }
+    .industry-media { height: 200px; }
 }
 
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
         z-index: 1001;
+        padding: 5px;
+        margin-right: -5px;
     }
 
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        letter-spacing: -1px;
     }
 
     .hero h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .nav-links {
